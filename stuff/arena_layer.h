@@ -1,0 +1,35 @@
+struct arena_view {
+	float x;
+	float y;
+	float w_half;
+	float h_half;
+};
+
+struct arena_layer {
+	struct fcsim_arena arena;
+	int loaded;
+
+	struct button load_button;
+	struct load_layer load_layer;
+
+	struct runner *runner;
+	int running;
+
+	struct arena_view view;
+	float view_scale;
+
+	int prev_x;
+	int prev_y;
+	int pressed;
+
+	uint64_t min_frame_time;
+};
+
+void arena_layer_init(struct arena_layer *arena_layer);
+void arena_layer_show(struct arena_layer *arena_layer);
+void arena_layer_draw(struct arena_layer *arena_layer);
+void arena_layer_event(struct arena_layer *arena_layer, struct event *event);
+
+//added for vidbot
+void draw_arena(struct fcsim_arena *arena, struct fcsim_block_stat *stats);
+static void set_view_wh_from_scale(struct arena_view *view, float scale); 

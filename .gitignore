@@ -1,8 +1,23 @@
 *.o
+*.a
 *.d
 *.xml
-fcsim
-html/fcsim.wasm
+*.mp4
+*.exe
 tags
-.ninja_log
-.ninja_deps
+
+# wayland generated files from glfw
+stuff/glfw/src/wayland-idle-inhibit-unstable-v1-client-protocol.c
+stuff/glfw/src/wayland-idle-inhibit-unstable-v1-client-protocol.h
+stuff/glfw/src/wayland-pointer-constraints-unstable-v1-client-protocol.c
+stuff/glfw/src/wayland-pointer-constraints-unstable-v1-client-protocol.h
+stuff/glfw/src/wayland-relative-pointer-unstable-v1-client-protocol.c
+stuff/glfw/src/wayland-relative-pointer-unstable-v1-client-protocol.h
+stuff/glfw/src/wayland-viewporter-client-protocol.c
+stuff/glfw/src/wayland-viewporter-client-protocol.h
+stuff/glfw/src/wayland-xdg-decoration-client-protocol.c
+stuff/glfw/src/wayland-xdg-decoration-client-protocol.h
+stuff/glfw/src/wayland-xdg-shell-client-protocol.c
+stuff/glfw/src/wayland-xdg-shell-client-protocol.h
+
+.vscode
